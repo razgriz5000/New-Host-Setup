@@ -5,6 +5,10 @@
   - name: updateRepos
     yum: update_cache=yes name=* state=latest
     changed_when: false
+  vars:
+  - name: username
+    prompt: What is username?
+    default: user
   tasks:
   - name: install packages
     yum: name={{ item }} state=latest
@@ -15,11 +19,9 @@
   - name: Copy-vimrc
     copy:
       src: files/.vimrc
-      dest: ~/.vimrc
+      dest: /home/{{ username }}/.vimrc
   - name: CreateUser
     user:
-      name: razgriz
+      name: {{ username }}
       state: present
-      update_password: on_create
-      password: Temp1234
 
