@@ -12,4 +12,14 @@
       - htop
       - git
       - vim
+  - name: Copy-vimrc
+    copy:
+      src: files/.vimrc
+      dest: ~/.vimrc
+  - name: CreateUser
+    user:
+      name: razgriz
+      state: present
+      update_password: on_create
+      password: Temp1234
 
