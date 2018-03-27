@@ -1,0 +1,15 @@
+--- # Setup a New Host
+- hosts: localhost
+  become: true
+  pre_tasks:
+  - name: updateRepos
+    yum: update_cache=yes name=* state=latest
+    changed_when: false
+  tasks:
+  - name: install packages
+    yum: name={{ item }} state=latest
+    with_items:
+      - htop
+      - git
+      - vim
+
