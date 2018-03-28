@@ -21,9 +21,10 @@
       - git
       - vim
       - ruby
-  - gem:
-    name: bundler
-    state: latest
+  - name: Install bundler
+    gem:
+      name: bundler
+      state: latest
   - name: CreateUser
     user:
       name: '{{ username }}'
