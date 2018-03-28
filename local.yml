@@ -5,11 +5,10 @@
   - name: updateRepos
     yum: update_cache=yes name=* state=latest
     changed_when: false
-  vars:
-    vars_prompt:
-    - name: username
-      prompt: What is username?
-      default: user
+  vars_prompt:
+  - name: username
+    prompt: What is username?
+    default: user
   tasks:
   - name: install packages
     yum: name={{ item }} state=latest
