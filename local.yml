@@ -11,7 +11,7 @@
     default: user
   vars:
     dest: /home/"{{username}}"
-    restult: destresult
+    result: destresult
     debug: destresult
   tasks:
   - name: install packages
