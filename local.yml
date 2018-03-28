@@ -10,7 +10,7 @@
     prompt: What is username?
     default: user
   vars:
-    dest: /home/"{{username}}"/.vimrc
+    dest: /home/"{{username}}"
     restult: destresult
     debug: destresult
   tasks:
