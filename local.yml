@@ -19,9 +19,9 @@
   - name: Copy-vimrc
     copy:
       src: files/.vimrc
-      dest: /home/{{username}}/.vimrc
+      dest: /home/"{{username}}"/.vimrc
   - name: CreateUser
     user:
-      name: {{ username }}
+      name: "{{ username }}"
       state: present
 
