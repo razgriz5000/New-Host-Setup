@@ -20,6 +20,7 @@
       - htop
       - git
       - vim
+      - ruby
   - name: CreateUser
     user:
       name: '{{ username }}'
