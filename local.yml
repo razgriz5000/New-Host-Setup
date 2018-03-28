@@ -26,4 +26,5 @@
       state: present
   - name: Copy-vimrc
     copy: src=files/.vimrc dest="/home/{{username}}/.vimrc"
-
+  - name: Copy-vimrc
+    copy: src=files/.bashrc dest="/home/{{username}}/.bashrc"
