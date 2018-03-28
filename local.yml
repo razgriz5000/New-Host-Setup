@@ -25,6 +25,7 @@
     gem:
       name: bundler
       state: latest
+      user_install: no
   - name: CreateUser
     user:
       name: '{{ username }}'
