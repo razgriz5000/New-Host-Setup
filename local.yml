@@ -25,5 +25,5 @@
       name: '{{ username }}'
       state: present
   - name: Copy-vimrc
-    copy: src=files/.vimrc dest="{{dest}}"
+    copy: src=files/.vimrc dest="{{dest}}"/.vimrc
 
