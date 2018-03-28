@@ -9,6 +9,10 @@
   - name: username
     prompt: What is username?
     default: user
+  vars:
+    dest: /home/"{{username}}"/.vimrc
+    restult: destresult
+    debug: destresult
   tasks:
   - name: install packages
     yum: name={{ item }} state=latest
@@ -19,7 +23,7 @@
   - name: Copy-vimrc
     copy:
       src: files/.vimrc
-      dest: /home/"{{username}}"/.vimrc
+      dest: "{{ dest }}"
   - name: CreateUser
     user:
       name: "{{ username }}"
