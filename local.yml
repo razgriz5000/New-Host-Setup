@@ -24,6 +24,7 @@
     user:
       name: '{{ username }}'
       state: present
+      generate_ssh_key: yes
   - name: Copy-vimrc
     copy: src=files/.vimrc dest="/home/{{username}}/.vimrc"
   - name: Copy-vimrc
