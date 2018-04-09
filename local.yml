@@ -20,7 +20,7 @@
     with_items:
       - htop
       - git
-      - vim:
+      - vim
   - name: Copy-vimrc
     copy: src=files/.vimrc dest="/home/{{username}}/.vimrc"
   - name: Copy-vimrc
