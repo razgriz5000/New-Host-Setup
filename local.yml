@@ -1,6 +1,7 @@
 --- # Setup a New Host
 - hosts: localhost
-  become: true
+  become: yes
+  become_method: sudo
   pre_tasks:
   - name: updateRepos
     yum: update_cache=yes name=* state=latest
