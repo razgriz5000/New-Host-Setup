@@ -19,18 +19,7 @@
     with_items:
       - htop
       - git
-      - vim
-      - ruby
-  - name: Install bundler
-    gem:
-      name: bundler
-      state: latest
-      user_install: no
-  - name: CreateUser
-    user:
-      name: '{{ username }}'
-      state: present
-      generate_ssh_key: yes
+      - vimm:
   - name: Copy-vimrc
     copy: src=files/.vimrc dest="/home/{{username}}/.vimrc"
   - name: Copy-vimrc
