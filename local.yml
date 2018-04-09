@@ -25,3 +25,7 @@
     copy: src=files/.vimrc dest="/home/{{username}}/.vimrc"
   - name: Copy-vimrc
     copy: src=files/.bashrc dest="/home/{{username}}/.bashrc"
+  - name: Copy-vimrc root
+    copy: src=files/.vimrc dest="/home/root/.vimrc"
+  - name: Copy-vimrc root
+    copy: src=files/.bashrc dest="/home/root/.bashrc"
